@@ -10,6 +10,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&display=swap" rel="stylesheet">
         
+        <? if( $post->post_name == 'sample-page' ) : ?>
+        <link href="<?bloginfo('template_url');?>/css/vue-tabs.css" rel="stylesheet">
+        <? endif; ?>
         <link href="<?bloginfo('template_url');?>/css/main.css" rel="stylesheet">
         <!-- Favicons -->
         <!-- <link rel="icon" href="<?php bloginfo('template_url'); ?>/images/favicons/favicon.ico">
