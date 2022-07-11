@@ -59,3 +59,19 @@ h2 {
 .zvit-content .gallery {
   margin-bottom: 30px;
 }
+#accounts .tabs-component {
+  margin: 10px 0;
+}
+#accounts .tabs-component ul {
+  padding: 0px;
+}
+#accounts .tabs-component ul li {
+  position: relative;
+}
+#accounts .tabs-component .tabs-component-panels {
+  position: relative;
+  padding: 30px ;
+}
+#accounts .tabs-component .tabs-component-panels section {
+  word-break: break-word;
+}
