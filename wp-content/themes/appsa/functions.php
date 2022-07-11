@@ -1,5 +1,4 @@
 <?
-
 add_theme_support( 'post-thumbnails' );
 add_post_type_support('page', 'custom-fields');
 
@@ -39,6 +38,46 @@ remove_filter( ‘the_excerpt’, ‘wpautop’ );
 	}
 
 	add_action( 'init', 'macros_post_type', 0 );
+// ДОБАВЛЯЕМ POST_TYPE zvit
+////////////////////////////////////////////////////////////////////////////////////////////////////
+	function zvit_post_type(){
+		$labels = array(
+			'name' => _x('Звіт','post type general name', 'appsa'),
+			'singular_name' =>_x('Звіт','post type singular name', 'appsa'),
+			'parent_item_colon' => '',
+			'new_item' => 'New Звіт',
+			'add_new'             => __( 'Добавить новый', 'appsa' ),
+			'add_new_item' => 'Add New Звіт',
+			'edit_item' => 'Edit Звіт',
+		);
+
+		$args = array(
+			'label'               => __( 'zvit', 'appsa' ),
+	        'description'         => __( 'Звіт', 'appsa' ),
+	        'labels'              => $labels,
+	        // Поддерживаемые поля при редактировании записи
+	        'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields'),
+	        // Связь с таксономиями 
+	        // 'taxonomies'          => array( 'genre' ),
+	        'hierarchical'        => false,
+	        'public'              => true,
+	        'show_ui'             => true,
+	        'show_in_menu'        => true,
+	        'show_in_nav_menus'   => true,
+	        'show_in_admin_bar'   => true,
+	        'menu_position'  	  => 20,					// позиция в меню в админке
+	        'menu_icon' 		  => 'dashicons-location',  // иконка
+	        'can_export'          => true,
+	        'has_archive'         => true,
+	        'exclude_from_search' => false,
+	        'publicly_queryable'  => true,
+	        'capability_type'     => 'post',
+		);
+
+		register_post_type('zvit',$args);
+	}
+
+	add_action( 'init', 'zvit_post_type', 0 );
 
 // ДОБАВЛЯЕМ СВОИ МЕНЮ
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -155,6 +194,34 @@ remove_filter( ‘the_excerpt’, ‘wpautop’ );
 	}
 	add_shortcode( 'carousel', 'gen_carousel' );
 
+// ШОРТКОДЫ ДЛЯ КВЕСТОВ
+////////////////////////////////////////////////////////////////////////////////////////////////////
+	function gen_zvit($atts){
+		$args = array(
+				'post_type'=> 'zvit',
+				'order'    => 'DESC',
+				'posts_per_page' => $atts['quantity'],
+
+                'post__not_in' => array(get_the_id(), $atts['exclude'])
+		    );
+		$the_query = new WP_Query( $args );
+		//$quests = $the_query->posts;  array of objects
+		
+        $output = '';
+        if( $the_query->have_posts() ) : 
+        	while ( $the_query->have_posts() ) : $the_query->the_post();
+	            // gen html
+	            ob_start();
+	            get_template_part( 'parts/zvit-part' );
+	            $output .= ob_get_clean();
+        	endwhile;
+        endif;
+
+		wp_reset_postdata(); // сброс глобальной переменной $post
+
+		return $output;
+	}
+	add_shortcode( 'zvit', 'gen_zvit' );
 
 // Добавляем новый метабокс на страницу редактирования комментария
 add_action( 'add_meta_boxes_comment', 'extend_comment_add_meta_box' );
