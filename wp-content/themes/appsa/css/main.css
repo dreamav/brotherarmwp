@@ -68,6 +68,9 @@ h2 {
 #accounts .tabs-component ul li {
   position: relative;
 }
+#accounts .tabs-component ul .tabs-component-tab-a {
+  font-size: 12px;
+}
 #accounts .tabs-component .tabs-component-panels {
   position: relative;
   padding: 30px ;

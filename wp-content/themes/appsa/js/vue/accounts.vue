@@ -53,6 +53,13 @@
 		        <tab name="Dogecoin (DOGE)">
 		           <copytext :text="'DTnLgkXXJGzGjpykE6LHxmcxmPTK7aE5zr'"></copytext>
 		        </tab>
+		        <tab name="Tether USD (USDT)">
+		           <copytext :text="'0x5E3BF03F88BCf94931b4c67c1437875cc6A5062F'" :desc="'(ETH)'"></copytext>
+		           <copytext :text="'TKFMSNdRXRt5eqgRGwdQqextHNthSUBJB3'" :desc="'(TRX)'"></copytext>
+		        </tab>
+		        <tab name="BNB (BNB)">
+		           <copytext :text="'0x5E3BF03F88BCf94931b4c67c1437875cc6A5062F'"></copytext>
+		        </tab>
 		    </tabs>			
 		</div>
 	</div>
