@@ -1,0 +1,35 @@
+{
+  "name": "todobox",
+  "version": "1.0.0",
+  "description": "todobox gulp support",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dreama",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^0.17.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "browser-sync": "^2.18.12",
+    "del": "^5.1.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-less": "^3.3.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "smart-grid": "^1.1.0",
+    "v-calendar": "^1.0.8",
+    "vue-loader": "^14.2.4",
+    "vue-template-compiler": "^2.6.11",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "qs": "^6.9.4",
+    "vue": "^2.6.11",
+    "vue-masked-input": "^0.5.2"
+  }
+}
