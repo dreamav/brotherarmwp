@@ -1,6 +1,3 @@
-<?
-
-?>
 <div id="footer">
 	<div class="footer-content">
 		<div class="links">

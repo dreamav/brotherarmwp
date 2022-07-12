@@ -42,6 +42,9 @@ get_header();?>
 					<h2>Реквізити</h2>
 					<accounts></accounts>
 				</div>
+				<div id="contact-form">
+					<?=do_shortcode('[contact-form-7 id="57" title="Контактна форма"]')?>
+				</div>
 			</div>
 			<? get_template_part( 'parts/footer' ); ?>
         </div>
