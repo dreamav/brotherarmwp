@@ -5,6 +5,16 @@ h2{
 	margin-top: 30px;
 }
 
+body{
+	div.maincontent{
+		display: flex;
+	    flex-wrap: wrap;
+	    flex-direction: column;
+	    justify-content: space-between;
+	    min-height: 100vh;
+	}
+}
+
 #header{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 800;
@@ -29,6 +39,9 @@ h2{
 
 	width:900px;
 	margin:0 auto;
+
+	margin-bottom: auto;
+
 	.sm-block({
 		width:100%;
 	});
@@ -88,5 +101,28 @@ h2{
 				word-break: break-word;
 			}
 		}
+	}
+}
+
+#footer{
+	background-color:#333333;
+	margin-top: 30px;
+
+	.footer-content{
+		width: 900px;
+	    margin: 0 auto;
+	    display: flex;
+	    flex-wrap: wrap;
+	    align-items: center;
+	    justify-content: flex-end;
+	    padding:30px 0;
+	    
+
+	    .links{
+	    	a{
+	    		color:#fff;
+	    		text-decoration: none;
+	    	}
+	    }
 	}
 }

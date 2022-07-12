@@ -1,6 +1,6 @@
 <? get_header(); ?>
 <body>
-    <div>
+    <div class="maincontent">
         <? get_template_part( 'parts/navigation' ); ?>
         <div class="wrap">
 			<?      
@@ -11,8 +11,8 @@
 			   endwhile;
 			endif;
 			?>
-			<? get_template_part( 'parts/footer' ); ?>
         </div>
+		<? get_template_part( 'parts/footer' ); ?>
 	</div>
 <?
 get_footer();
