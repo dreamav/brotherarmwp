@@ -1,18 +1,16 @@
 <? get_header(); ?>
-<body>
+<body class="<?=$post_type?>">
 	<? get_template_part( 'parts/header-single-zvit' ); ?>
 
     <div id="content">
-    	<div class="wrap">
-			<?      
-			if (have_posts()) :
-			   while (have_posts()) :
-				   	the_post();
-			        get_template_part( 'content-zvit', get_post_format() );
-			   endwhile;
-			endif;
-			?>
-		</div>
+		<?      
+		if (have_posts()) :
+		   while (have_posts()) :
+			   	the_post();
+		        get_template_part( 'content-zvit', get_post_format() );
+		   endwhile;
+		endif;
+		?>
 	</div>
 
 

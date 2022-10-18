@@ -186,3 +186,28 @@ body {
 #footer .social ul li {
   padding: 5px;
 }
+.zvit #header .header_center {
+  background: url("../images/header_bg.jpg") center center no-repeat;
+  min-height: 160px;
+  width: 100%;
+  background-size: cover;
+}
+.zvit #header .header_center .wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 160px;
+}
+.zvit #header .header_center .button {
+  height: 72px;
+}
+.zvit #header .header_center .button a {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 24px;
+  color: #12303a;
+  background-color: #f3e138;
+  padding: 24px 103px;
+  font-weight: bold;
+  border-radius: 64px;
+  display: inline-block;
+}
