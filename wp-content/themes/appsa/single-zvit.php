@@ -1,8 +1,9 @@
 <? get_header(); ?>
 <body>
-	<? get_template_part( 'parts/header' ); ?>
-	
+	<? get_template_part( 'parts/header-single-zvit' ); ?>
+
     <div id="content">
+    	<div class="wrap">
 			<?      
 			if (have_posts()) :
 			   while (have_posts()) :
@@ -11,6 +12,7 @@
 			   endwhile;
 			endif;
 			?>
+		</div>
 	</div>
 
 
