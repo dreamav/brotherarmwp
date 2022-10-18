@@ -5,10 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?php bloginfo('name'); ?></title>
         <!-- Lib CSS -->
-        <link rel="stylesheet" type="text/css" href="<?bloginfo('template_url');?>/lib/bootstrap/css/bootstrap.min.css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="<?bloginfo('template_url');?>/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="<?bloginfo('template_url');?>/css/style.css">
         
         <? if( $post->post_name == 'sample-page' ) : ?>
         <link href="<?bloginfo('template_url');?>/css/vue-tabs.css" rel="stylesheet">
