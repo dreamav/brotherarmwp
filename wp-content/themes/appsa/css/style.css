@@ -13,6 +13,7 @@ body {
 #header .header_top .logo {
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 #header .header_top .logo img {
   position: absolute;
@@ -39,7 +40,7 @@ body {
   color: #12303a;
 }
 #header .header_center {
-  background: url("../imgs/header_bg.jpg") center center no-repeat;
+  background: url("../images/header_bg.jpg") center center no-repeat;
   min-height: 300px;
   width: 100%;
   background-size: cover;
@@ -124,6 +125,24 @@ body {
 #content .haslo h2 {
   font-size: 30px;
   color: #12303a;
+}
+#content .zvit_items {
+  display: flex;
+  flex-wrap: wrap;
+}
+#content .zvit_items .zvit-item {
+  width: 20%;
+  margin: 20px;
+}
+#content .zvit_items .zvit-item a {
+  font-family: 'Fira Sans', sans-serif;
+  color: #12303a;
+}
+#content .zvit_items .zvit-item .img {
+  width: 100%;
+  height: 120px;
+  background-size: cover;
+  margin-bottom: 10px;
 }
 #footer {
   background-color: #12303a;

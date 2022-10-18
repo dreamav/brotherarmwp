@@ -15,7 +15,7 @@
         <? if( $post->post_name == 'sample-page' ) : ?>
         <link href="<?bloginfo('template_url');?>/css/vue-tabs.css" rel="stylesheet">
         <? endif; ?>
-        <link href="<?bloginfo('template_url');?>/css/main.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="<?bloginfo('template_url');?>/css/style.css">
         <!-- Favicons -->
         <!-- <link rel="icon" href="<?php bloginfo('template_url'); ?>/images/favicons/favicon.ico">
         <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon1.ico" type="image/x-icon"/>
