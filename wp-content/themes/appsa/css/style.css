@@ -144,6 +144,25 @@ body {
   background-size: cover;
   margin-bottom: 10px;
 }
+#content #accounts .tabs-component {
+  margin: 10px 0;
+}
+#content #accounts .tabs-component ul {
+  padding: 0px;
+}
+#content #accounts .tabs-component ul li {
+  position: relative;
+}
+#content #accounts .tabs-component ul .tabs-component-tab-a {
+  font-size: 12px;
+}
+#content #accounts .tabs-component .tabs-component-panels {
+  position: relative;
+  padding: 30px ;
+}
+#content #accounts .tabs-component .tabs-component-panels section {
+  word-break: break-word;
+}
 #footer {
   background-color: #12303a;
   margin-top: 60px;
