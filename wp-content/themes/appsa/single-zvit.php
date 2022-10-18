@@ -1,8 +1,8 @@
 <? get_header(); ?>
 <body>
-    <div class="maincontent">
-        <? get_template_part( 'parts/navigation' ); ?>
-        <div class="wrap">
+	<? get_template_part( 'parts/header' ); ?>
+	
+    <div id="content">
 			<?      
 			if (have_posts()) :
 			   while (have_posts()) :
@@ -11,9 +11,11 @@
 			   endwhile;
 			endif;
 			?>
-        </div>
-		<? get_template_part( 'parts/footer' ); ?>
 	</div>
-<?
-get_footer();
-?>
+
+
+	<? get_template_part( 'parts/footer' ); ?>
+
+	<? get_footer() ?>
+    </body>
+</html>
