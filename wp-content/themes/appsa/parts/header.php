@@ -6,10 +6,11 @@ $lang_slug = $current_blog_details->path;
 
 $all_sites = wp_get_sites();
 $sites_menu_html = '<ul>';
-unset($all_sites[0]);
+// unset($all_sites[0]);
 foreach ($all_sites as $m_site) {
 	$m_site_details = get_blog_details( $m_site[ 'blog_id' ] );
 	$menu_text = str_replace("/", "", $m_site_details->path);
+	if($menu_text=='') $menu_text = 'ua';
 
 	if ( $m_site[ 'blog_id' ]!=get_current_blog_id() ) {
 		$sites_menu_html .= '<li><a href="'.$m_site['path'].'">'.$menu_text.'</a></li>';
