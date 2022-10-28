@@ -23,6 +23,13 @@
         <link rel="apple-touch-icon" sizes="72x72" href="<?php bloginfo('template_url'); ?>/images/favicons/apple-touch-icon-72x72.png">
         <link rel="apple-touch-icon" sizes="114x114" href="<?php bloginfo('template_url'); ?>/images/favicons/apple-touch-icon-114x114.png"> -->
 
+         <!-- link to the CSS files for this menu type -->
+        <link rel="stylesheet" media="screen" href="<?bloginfo('template_url');?>/js/superfish/css/superfish.css">
+
+        <!-- link to the JavaScript files (hoverIntent is optional) -->
+        <script src="<?bloginfo('template_url');?>/js/superfish/js/hoverIntent.js"></script>
+        <script src="<?bloginfo('template_url');?>/js/superfish/js/superfish.js"></script>
+
         <? wp_head();?>
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
         <!--[if lt IE 9]>

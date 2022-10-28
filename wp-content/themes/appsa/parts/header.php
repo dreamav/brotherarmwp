@@ -3,6 +3,22 @@ global $blog_id;
 $current_blog_details = get_blog_details( array( 'blog_id' => $blog_id ) );
 $blogname = $current_blog_details->blogname;
 $lang_slug = $current_blog_details->path;
+
+$all_sites = wp_get_sites();
+$sites_menu_html = '<ul>';
+unset($all_sites[0]);
+foreach ($all_sites as $m_site) {
+	$m_site_details = get_blog_details( $m_site[ 'blog_id' ] );
+	$menu_text = str_replace("/", "", $m_site_details->path);
+
+	if ( $m_site[ 'blog_id' ]!=get_current_blog_id() ) {
+		$sites_menu_html .= '<li><a href="'.$m_site['path'].'">'.$menu_text.'</a></li>';
+	} else {
+		$site_name = $menu_text;
+	}
+
+}
+$sites_menu_html .= '</ul>';
 ?>
 <div id="header">
 
@@ -12,13 +28,23 @@ $lang_slug = $current_blog_details->path;
 			<h1><?=$blogname?></h1>
 		</div>
 
-		<ul class="header_menu">
-			<li><a href="">Про нас</a></li>
-			<li><a href="">Наші потреби</a></li>
-			<li><a href="">Звіт</a></li>
-			<li><a href="">Реквізити</a></li>
-			<li><a href="">Контакти</a></li>
-		</ul>
+
+		<div>
+			<ul class="sf-menu" id="example">
+				<li class="current">
+					<a href="followed.html"><?=$site_name?></a>
+					<?=$sites_menu_html;?>					
+				</li>
+			</ul>
+
+			<ul class="header_menu">
+				<li><a href="">Про нас</a></li>
+				<li><a href="">Наші потреби</a></li>
+				<li><a href="">Звіт</a></li>
+				<li><a href="">Реквізити</a></li>
+				<li><a href="">Контакти</a></li>
+			</ul>
+		</div>
 	</div>
 
 	<div class="header_center">

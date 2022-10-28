@@ -11,6 +11,15 @@
 
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script type="text/javascript" src="http://brotherarm.wp/wp-content/themes/appsa/lib/jquery/jquery.min.js"></script>
+    <!-- link to the CSS files for this menu type -->
+	<link rel="stylesheet" media="screen" href="js/superfish/dist/css/superfish.css">
+
+	<!-- link to the JavaScript files (hoverIntent is optional) -->
+	<script src="js/superfish/dist/js/hoverIntent.js"></script>
+	<script src="js/superfish/dist/js/superfish.js"></script>
+
 </head>
 <body>
 
@@ -22,13 +31,28 @@
 			<h1>ГО ПЛЕЧЕ ПОБРАТИМА</h1>
 		</div>
 
-		<ul class="header_menu">
-			<li><a href="">Про нас</a></li>
-			<li><a href="">Наші потреби</a></li>
-			<li><a href="">Звіт</a></li>
-			<li><a href="">Реквізити</a></li>
-			<li><a href="">Контакти</a></li>
-		</ul>
+		<div>
+			<ul class="sf-menu" id="example">
+				<li class="current">
+					<a href="followed.html">menu item 1</a>
+					<ul>
+						<li>
+							<a href="followed.html">menu item</a>
+						</li>
+						<li><a href="followed.html">menu item</a></li>
+						<li><a href="followed.html">menu item</a></li>
+						<li><a href="followed.html">menu item</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="header_menu">
+				<li><a href="">Про нас</a></li>
+				<li><a href="">Наші потреби</a></li>
+				<li><a href="">Звіт</a></li>
+				<li><a href="">Реквізити</a></li>
+				<li><a href="">Контакти</a></li>
+			</ul>
+		</div>
 	</div>
 
 	<div class="header_center">
@@ -161,5 +185,14 @@
 		</div>
 	</div>
 </div>
+
+
+<!-- initialise Superfish -->
+	<script>
+	  jQuery(document).ready(function(){
+	    jQuery('ul.sf-menu').superfish();
+	  });
+	</script>
+
 </body>
 </html>
