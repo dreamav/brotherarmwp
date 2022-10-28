@@ -26,6 +26,7 @@ body {
   margin-left: 130px;
   font-size: 36px;
   padding: 25px 0;
+  text-transform: uppercase;
 }
 #header .header_top .header_menu {
   display: flex;
@@ -59,6 +60,7 @@ body {
   font-size: 60px;
   color: #12303a;
   line-height: 70px;
+  text-transform: uppercase;
   padding: 120px 0px;
 }
 #header .header_center .button a {
@@ -69,6 +71,7 @@ body {
   padding: 24px 103px;
   font-weight: bold;
   border-radius: 64px;
+  text-transform: uppercase;
 }
 #content .section {
   margin-top: 30px;
