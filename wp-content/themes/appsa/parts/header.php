@@ -30,7 +30,7 @@ $sites_menu_html .= '</ul>';
 		</div>
 
 
-		<div>
+		<div class="menu_wrap">
 			<ul class="sf-menu" id="example">
 				<li class="current">
 					<a href="followed.html"><?=$site_name?></a>

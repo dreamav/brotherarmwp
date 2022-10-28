@@ -28,6 +28,30 @@ body {
   padding: 25px 0;
   text-transform: uppercase;
 }
+#header .header_top .menu_wrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#header .header_top .sf-menu {
+  margin-bottom: 0px;
+}
+#header .header_top .sf-menu li {
+  background: none;
+}
+#header .header_top .sf-menu a {
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 7px;
+  font-family: 'Fira Sans', sans-serif;
+  color: #12303a;
+}
+#header .header_top .sf-menu ul {
+  min-width: 10px;
+}
+#header .header_top .sf-menu ul li {
+  background: #fff;
+}
 #header .header_top .header_menu {
   display: flex;
   flex-direction: row;
