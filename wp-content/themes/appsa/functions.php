@@ -98,21 +98,7 @@ remove_filter( ‘the_excerpt’, ‘wpautop’ );
 	class Primary_Walker_Nav_Menu extends Walker_Nav_Menu {
 		function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
 			global $wp;
-			if ( $wp->request == '' ){
-				// $item->url = str_replace('/#', '#', $item->url);
-				$item->url = str_replace('/kiev/#', '#', $item->url);
-				$item->url = str_replace('/moscow/#', '#', $item->url);
-				$item->url = str_replace('/rostov/#', '#', $item->url);
-				$item->url = str_replace('/novosib/#', '#', $item->url);
-				$item->url = str_replace('/ekb/#', '#', $item->url);
-				$item->url = str_replace('/kazan/#', '#', $item->url);
-				$item->url = str_replace('/spb/#', '#', $item->url);
-				$item->url = str_replace('/ny/#', '#', $item->url);
-				$item->url = str_replace('/nn/#', '#', $item->url);
-				$item->url = str_replace('/omsk/#', '#', $item->url);
-				$item->url = str_replace('/chel/#', '#', $item->url);
-				$item->url = str_replace('/samara/#', '#', $item->url);
-			}
+
 			if (array_search('menu-item-has-children', $item->classes)) {
 				$output .= sprintf("\n<li class='%s'><a href='%s' class=\"dropdown-toggle\" >%s</a>\n", ( array_search('current-menu-item', $item->classes) || array_search('current-page-parent', $item->classes) ) ? 'active' : '', $item->url, $item->title
 				);

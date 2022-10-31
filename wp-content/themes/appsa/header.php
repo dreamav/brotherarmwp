@@ -26,11 +26,14 @@
          <!-- link to the CSS files for this menu type -->
         <link rel="stylesheet" media="screen" href="<?bloginfo('template_url');?>/js/superfish/css/superfish.css">
 
+        <? wp_head();?>
+
         <!-- link to the JavaScript files (hoverIntent is optional) -->
         <script src="<?bloginfo('template_url');?>/js/superfish/js/hoverIntent.js"></script>
         <script src="<?bloginfo('template_url');?>/js/superfish/js/superfish.js"></script>
 
-        <? wp_head();?>
+        <script src="<?bloginfo('template_url');?>/js/custom.js"></script>
+
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
         <!--[if lt IE 9]>
         	<script src="js/html5shiv.js"></script>
