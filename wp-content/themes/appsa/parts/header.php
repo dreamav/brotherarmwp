@@ -37,14 +37,23 @@ $sites_menu_html .= '</ul>';
 					<?=$sites_menu_html;?>					
 				</li>
 			</ul>
-
-			<ul class="header_menu">
+<?php 
+					wp_nav_menu( array(
+						'container' => '',
+						'container_class' => '',
+						'menu_class'      => 'header_menu',
+						'theme_location'=>'top',
+						'after'=>'',
+						// 'walker' => new Primary_Walker_Nav_Menu()
+					) );
+				?>
+			<!-- <ul class="header_menu">
 				<li><a href="">Про нас</a></li>
 				<li><a href="">Наші потреби</a></li>
 				<li><a href="">Звіт</a></li>
 				<li><a href="">Реквізити</a></li>
 				<li><a href="">Контакти</a></li>
-			</ul>
+			</ul> -->
 		</div>
 	</div>
 
