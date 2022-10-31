@@ -41,10 +41,29 @@ body {
 }
 #header .header_top .sf-menu a {
   background-color: #fff;
-  border-radius: 6px;
   padding: 7px;
   font-family: 'Fira Sans', sans-serif;
   color: #12303a;
+}
+#header .header_top .sf-menu a.lang:before {
+  display: inline-block;
+  height: 12px;
+  width: 18px;
+  background-position: 0px;
+  margin-right: 4px;
+  content: '';
+}
+#header .header_top .sf-menu a.lang-ua:before {
+  background-image: url(../images/flags/icons8-ukraine-18.png);
+}
+#header .header_top .sf-menu a.lang-de:before {
+  background-image: url(../images/flags/icons8-germany-18.png);
+}
+#header .header_top .sf-menu a.lang-en:before {
+  background-image: url(../images/flags/icons8-usa-18.png);
+}
+#header .header_top .sf-menu a.lang-sk:before {
+  background-image: url(../images/flags/icons8-slovakia-18.png);
 }
 #header .header_top .sf-menu ul {
   min-width: 10px;

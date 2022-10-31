@@ -13,7 +13,7 @@ foreach ($all_sites as $m_site) {
 	if($menu_text=='') $menu_text = 'ua';
 
 	if ( $m_site[ 'blog_id' ]!=get_current_blog_id() ) {
-		$sites_menu_html .= '<li><a href="'.$m_site['path'].'">'.$menu_text.'</a></li>';
+		$sites_menu_html .= '<li><a href="'.$m_site['path'].'" class="lang lang-'.$menu_text.'"><span>'.ucfirst($menu_text).'</span></a></li>';
 	} else {
 		$site_name = $menu_text;
 	}
@@ -33,7 +33,7 @@ $sites_menu_html .= '</ul>';
 		<div class="menu_wrap">
 			<ul class="sf-menu" id="example">
 				<li class="current">
-					<a href="followed.html"><?=$site_name?></a>
+					<a href="" class="lang lang-<?=$site_name?>"><span><?=ucfirst($site_name)?></span></a>
 					<?=$sites_menu_html;?>					
 				</li>
 			</ul>
