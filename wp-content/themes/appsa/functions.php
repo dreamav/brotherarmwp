@@ -183,6 +183,8 @@ remove_filter( ‘the_excerpt’, ‘wpautop’ );
 // ШОРТКОДЫ ДЛЯ КВЕСТОВ
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 	function gen_zvit($atts){
+		switch_to_blog(1);
+
 		$args = array(
 				'post_type'=> 'zvit',
 				'order'    => 'DESC',
@@ -192,6 +194,15 @@ remove_filter( ‘the_excerpt’, ‘wpautop’ );
 		    );
 		$the_query = new WP_Query( $args );
 		//$quests = $the_query->posts;  array of objects
+		/*$posts = get_posts( $args );
+		if(count($posts)>0){
+			$output = '';
+			foreach ($posts as $post) {
+			    ob_start();
+	            get_template_part( 'parts/zvit-part' );
+	            $output .= ob_get_clean();
+			}
+		}*/
 		
         $output = '';
         if( $the_query->have_posts() ) : 
@@ -204,6 +215,8 @@ remove_filter( ‘the_excerpt’, ‘wpautop’ );
         endif;
 
 		wp_reset_postdata(); // сброс глобальной переменной $post
+
+		restore_current_blog();
 
 		return $output;
 	}
