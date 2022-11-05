@@ -1,7 +1,7 @@
 <?
 global $blog_id;
 $current_blog_details = get_blog_details( array( 'blog_id' => $blog_id ) );
-$lang_slug = str_replace("/", "", $m_site_details->path);
+$lang_slug = str_replace("/", "", $current_blog_details->path);
 if($lang_slug=='') $lang_slug = 'ua';
 ?>
 

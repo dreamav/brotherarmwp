@@ -1,12 +1,11 @@
 <template>
 	<div>
 		<div id="card">
-			<h3>Bankové údaje</h3>
+			<h3>Bank Details</h3>
 			 <tabs
 			 	:options="{ useUrlFragment: false }"
 			 >
 		        <tab name="EUR">
-		            <p>Реквізити підприємства/Company details</p>
 					<copytext :text="'BROTHER ARM (B. A.)'" :desc="'Company Name:'"></copytext> 
 					<copytext :text="'UA223052990000026002003603096'" :desc="'IBAN:'"></copytext> 
 					<copytext :text="'JSC CB PRIVATBANK'" :desc="'Bank:'"></copytext> 
@@ -26,7 +25,7 @@
 		    </tabs>			
 		</div>
 		<div id="crypto">
-			<h3>Crypto</h3>
+			<h3>Crypto Wallets</h3>
 			<tabs
 			 	:options="{ useUrlFragment: false }"
 			 >
