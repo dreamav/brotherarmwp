@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div id="card">
-			<h3>Банківські перекази</h3>
+			<h3>Bankové údaje</h3>
 			 <tabs
 			 	:options="{ useUrlFragment: false }"
 			 >
