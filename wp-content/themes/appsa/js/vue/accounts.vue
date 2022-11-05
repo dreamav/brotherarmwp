@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div id="card">
-			<h3>Bankdaten</h3>
+			<h3>Банківські перекази</h3>
 			 <tabs
 			 	:options="{ useUrlFragment: false }"
 			 >
@@ -25,7 +25,7 @@
 		    </tabs>			
 		</div>
 		<div id="crypto">
-			<h3>Krypto-Brieftasche</h3>
+			<h3>Crypto</h3>
 			<tabs
 			 	:options="{ useUrlFragment: false }"
 			 >
