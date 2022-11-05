@@ -1,7 +1,13 @@
+<?
+global $blog_id;
+$current_blog_details = get_blog_details( array( 'blog_id' => $blog_id ) );
+$blogname = $current_blog_details->blogname;
+
+?>
 <div id="footer">
 	<div class="wrap">
 		<div class="company">
-			<h1>ГО ПЛЕЧЕ ПОБРАТИМА</h1>
+			<h1><?=$blogname?></h1>
 		</div>
 		<div class="social">
 			<ul>
