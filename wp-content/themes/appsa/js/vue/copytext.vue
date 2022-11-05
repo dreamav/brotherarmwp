@@ -1,5 +1,5 @@
 <template>
-	<p>{{text}} {{desc}} <a href="" @click.prevent="copyText()"><img src="/wp-content/themes/appsa/images/copy_24px.svg"></a></p>
+	<p>{{desc}} {{text}}<a href="" @click.prevent="copyText()"><img src="/wp-content/themes/appsa/images/copy_24px.svg"></a></p>
 </template>
 
 <script>
