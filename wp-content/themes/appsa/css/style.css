@@ -153,6 +153,13 @@ body {
 #content .section .sec_content .content_text p:last-child {
   padding-bottom: 0px;
 }
+#content .section .sec_content .testimonials p span {
+  display: inline-block;
+  min-width: 160px;
+}
+#content .section .sec_content .testimonials p span img {
+  height: 40px;
+}
 #content .section .sec_content .sec_dops {
   padding-top: 30px;
   width: 50%;
