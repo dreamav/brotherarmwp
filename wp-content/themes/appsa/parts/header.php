@@ -64,7 +64,7 @@ $sites_menu_html .= '</ul>';
 				<h1><?=sprintf( __( 'Join%sour%sinitiative', 'appsa' ), "<br>", "<br>" )?></h1>
 			</div>
 			<div class="button">
-				<a><?=_e( 'Help us', 'appsa' )?></a>
+				<a href="https://www.paypal.com/donate/?hosted_button_id=LJPLKFV5UBRWL" target="_blank"><?=_e( 'Help us', 'appsa' )?></a>
 			</div>
 		</div>
 	</div>
